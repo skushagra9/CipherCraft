@@ -1,10 +1,9 @@
-
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity ^0.8.0;
 
 contract CipherCraft{
-   mapping(address account => uint256) private _balances;
-   mapping(address account => mapping(address spender => uint256)) private _allowances;
+  mapping(address => uint256) private _balances;
+mapping(address => mapping(address => uint256)) private _allowances;
     
 event Transfer(address indexed from, address indexed to, uint256 value);
     uint8 public decimals = 18;
@@ -95,5 +94,3 @@ event Transfer(address indexed from, address indexed to, uint256 value);
     _update(account, address(0) , amount);
     }
     }
-
-
